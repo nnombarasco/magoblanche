@@ -8,11 +8,12 @@ body {
 /*TipoGrafias*/
 font-family: 'Slabo 27px', serif;
 font-family: 'Lobster', cursive;
+font-family: 'Permanent Marker', cursive;
 
 /*contenedor de imagene, carousel */
-.imagen-size{
-    height:400px;
-    width:400px;
+.border-box{
+    border: 10px solid;
+    box-shadow: 5px 10px #e00606;
 }
 
 /*Parrafo de Quien soy?*/
@@ -25,7 +26,7 @@ font-family: 'Lobster', cursive;
 /*titulo QuienSoy?*/
 .title-prop{
     font-family: 'Lobster', cursive;
-    color:pink;
+    color:rgb(247, 51, 158);
 }
 
 /*Barra de navegacion*/
@@ -42,4 +43,16 @@ font-family: 'Lobster', cursive;
 .navbar-button:hover{
     background-color: #e7288e;
     color: white;
+}
+
+/*Top*/
+.top-container{
+    position: absolute;
+    top: 15%;
+}
+ /*fondo del container principal de la pag quien soy?*/
+.background{
+    background: rgba(5, 72, 255, 0.3);
+    border: 3px solid;
+    box-shadow: 5px 1px #e91a8c;
 }
