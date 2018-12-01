@@ -20,13 +20,14 @@ font-family: 'Permanent Marker', cursive;
 .text-color{
     font-family: 'Slabo', serif;
     color: white;
-    font-size: 23px;
+    font-size: 20px;
 }
 
 /*titulo QuienSoy?*/
 .title-prop{
     font-family: 'Lobster', cursive;
     color:rgb(247, 51, 158);
+    font-size: 35px;
 }
 
 /*Barra de navegacion*/
