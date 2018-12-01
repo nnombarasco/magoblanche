@@ -4,3 +4,18 @@ body {
     height: 100%;
     background-size: 100%;
 }
+
+.navbar-background {
+    background-color: transparent;
+}
+
+.navbar-button{
+    background:rgba(128, 128, 128, 0.5);
+    color: white;
+    margin: 5px;
+}
+
+.navbar-button:hover{
+    background-color: #e7288e;
+    color: white;
+}
