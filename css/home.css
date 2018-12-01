@@ -12,7 +12,18 @@ body {
 .navbar-button{
     background:rgba(128, 128, 128, 0.5);
     color: white;
-    margin: 5px;
+    margin: 3px;
+    border-radius: 3px;
+    text-align: center
+}
+
+.custom-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: red;
+    border: 1px solid;
+    border-radius: .25rem;
 }
 
 .navbar-button:hover{
