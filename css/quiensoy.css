@@ -4,3 +4,42 @@ body {
     height: 100%;
     background-size: 100%;
 }
+
+/*TipoGrafias*/
+font-family: 'Slabo 27px', serif;
+font-family: 'Lobster', cursive;
+
+/*contenedor de imagene, carousel */
+.imagen-size{
+    height:400px;
+    width:400px;
+}
+
+/*Parrafo de Quien soy?*/
+.text-color{
+    font-family: 'Slabo', serif;
+    color: white;
+    font-size: 23px;
+}
+
+/*titulo QuienSoy?*/
+.title-prop{
+    font-family: 'Lobster', cursive;
+    color:pink;
+}
+
+/*Barra de navegacion*/
+.navbar-background {
+    background-color: transparent;
+}
+
+.navbar-button{
+    background:rgba(128, 128, 128, 0.5);
+    color: white;
+    margin: 5px;
+}
+
+.navbar-button:hover{
+    background-color: #e7288e;
+    color: white;
+}
