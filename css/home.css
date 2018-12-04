@@ -9,6 +9,11 @@ body {
     background-color: transparent;
 }
 
+.blanche-button {
+    color: #e8288e;
+    text-shadow: 5px 5px 10px #e8288e;
+}
+
 .navbar-button{
     background:rgba(128, 128, 128, 0.5);
     color: white;
@@ -31,11 +36,10 @@ body {
     color: white;
 }
 
-.img-reduction-60 img{
-    width: 90%;
+.blanche-img{
+    width: 65%;
 }
 
-
-.up img{
-    z-index:10;
+.mago-img {
+    width: 29%;
 }
