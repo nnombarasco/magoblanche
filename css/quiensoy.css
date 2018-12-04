@@ -48,12 +48,33 @@ font-family: 'Permanent Marker', cursive;
 
 /*Top*/
 .top-container{
-    position: absolute;
-    top: 15%;
+    margin-top: 3%;
 }
  /*fondo del container principal de la pag quien soy?*/
 .background{
-    background: rgba(5, 72, 255, 0.3);
+    background: rgba(5, 72, 255, 0.4);
     border: 3px solid;
     box-shadow: 5px 1px #e91a8c;
+}
+
+/*FOOTER*/
+.footer{
+    color: white;
+    background: rgba(30, 30, 31, 0.8);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container-fluid{
+    width: 102% !important;
+    margin-bottom: 3%;
+}
+
+.btn-social{
+    background-color: #0d0d0e;
+    color: white;   
+}
+.center{
+    margin-top: auto;
+    margin-bottom: auto;
 }
