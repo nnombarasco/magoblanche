@@ -30,3 +30,12 @@ body {
     background-color: #e7288e;
     color: white;
 }
+
+.img-reduction-60 img{
+    width: 90%;
+}
+
+
+.up img{
+    z-index:10;
+}
