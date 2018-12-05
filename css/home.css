@@ -22,6 +22,16 @@
     text-shadow: 5px 5px 10px #e8288e;
 }
 
+.top {
+    margin-top: 2%;
+}
+
+.title-Service {
+    font-family: 'Lobster', cursive;
+    color: rgb(247, 51, 158);
+    text-align: center;
+}
+
 .navbar-button{
     background:rgba(128, 128, 128, 0.5);
     color: white;
@@ -65,7 +75,7 @@ font-family: 'Permanent Marker', cursive;
 /*Parrafo de Quien soy?*/
 .text-color {
     font-family: 'Slabo', serif;
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
