@@ -30,6 +30,12 @@ font-family: 'Permanent Marker', cursive;
     font-size: 35px;
 }
 
+.title-Service{
+    font-family: 'Lobster', cursive;
+    color:rgb(247, 51, 158);
+    text-align: center;
+}
+
 /*Barra de navegacion*/
 .navbar-background {
     background-color: transparent;
@@ -50,6 +56,10 @@ font-family: 'Permanent Marker', cursive;
 .top-container{
     margin-top: 3%;
 }
+.top{
+    margin-top: 2%;
+}
+
  /*fondo del container principal de la pag quien soy?*/
 .background{
     background: rgba(5, 72, 255, 0.4);
