@@ -1,5 +1,5 @@
 body {
-    background-image: url("./../media/theatre.png");
+    
     width: 100%;
     height: 100%;
     background-size: 100%;
@@ -19,7 +19,7 @@ font-family: 'Permanent Marker', cursive;
 /*Parrafo de Quien soy?*/
 .text-color{
     font-family: 'Slabo', serif;
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
@@ -87,4 +87,14 @@ font-family: 'Permanent Marker', cursive;
 .center{
     margin-top: auto;
     margin-bottom: auto;
+}
+
+/*SHOW*/
+.size-show{
+    height: 580px;
+    width: 482px;
+}
+
+.top-container .top .social-button span{
+    overflow: none;
 }
