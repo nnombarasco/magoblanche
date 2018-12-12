@@ -100,10 +100,17 @@ font-family: 'Permanent Marker', cursive;
     padding: 3% 0%;
     margin-bottom: 3%;
 }
-<<<<<<< HEAD
-=======
 
 .margin-2-0 {
     margin: 2% 0%;
 }
->>>>>>> 34d16dfbddd0bf7127bac3177fea11a20bf12c6e
+
+.size-show {
+    height:580px;
+    width:482px;
+}
+
+.top-container.top.social-button spam {
+    overflow:none;
+
+}
