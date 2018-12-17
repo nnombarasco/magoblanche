@@ -143,3 +143,28 @@ font-family: 'Permanent Marker', cursive;
     overflow:none;
 
 }
+
+/*botón up*/
+.boton-subir {
+    display: none;
+    background: #e7288e;
+    border: thin solid #fff;
+    border-radius: 20px;
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    z-index: 10;
+}
+    /*evento hover*/
+    .boton-subir:hover {
+        box-shadow: 0px 2px 10px 0px rgba(255, 255, 255, 0.75);
+    }
+    /*estilos para el tag i*/
+    .boton-subir i {
+        color: #fff;
+        font-size: 1.5em;
+        padding: 10px 10px 10px 7px;
+        -ms-transform: rotate(-45deg); /* IE 9 */
+        -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+        transform: rotate(-45deg);
+    }

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -20,6 +20,33 @@
     <title>Mago Blanche</title>
 </head>
 <body>
+    <a href="#" id="js_up" class="boton-subir">
+        <!-- link del icono http://fontawesome.io/icon/rocket/ -->
+        <i class="fa fa-rocket" aria-hidden="true"></i>
+    </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- script para que funcione al 100% el botón ir arriba -->
+    <script>
+        //invocamos al objeto (window) y a su método (scroll), solo se ejecutara si el usuario hace scroll en la página
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) { //condición a cumplirse cuando el usuario aya bajado 301px a más.
+                $("#js_up").slideDown(300); //se muestra el botón en 300 mili segundos
+            } else { // si no
+                $("#js_up").slideUp(300); //se oculta el botón en 300 mili segundos
+            }
+        });
+
+        //creamos una función accediendo a la etiqueta i en su evento click
+        $("#js_up i").on('click', function (e) {
+            e.preventDefault(); //evita que se ejecute el tag ancla (<a href="#">valor</a>).
+            $("body,html").animate({ // aplicamos la función animate a los tags body y html
+                scrollTop: 0 //al colocar el valor 0 a scrollTop me volverá a la parte inicial de la página
+            }, 700); //el valor 700 indica que lo ara en 700 mili segundos
+            return false; //rompe el bucle
+        });
+    </script>
+
     <script src="https://apis.google.com/js/platform.js" async defer>
         { lang: 'es' }
     </script>
@@ -99,10 +126,10 @@
                     <P class="text-justify text-color">
                         Mi nombre es Matias Blanche, nacido en la ciudad de Rosario, provincia de Santa Fe, Argentina.
                         A los 16 años de edad, comencé mis estudios en el arte de la Magia, orientado por un reconocido mago rosarino.
-                         Con el correr de los años, incrementé mis conocimientos asistiendo a congresos, conferencias, y realizando diversos
-                          cursos de stand up, ventriloquóa, actuación, clown, improvisación y humor.
+                        Con el correr de los años, incrementé mis conocimientos asistiendo a congresos, conferencias, y realizando diversos
+                        cursos de stand up, ventriloquóa, actuación, clown, improvisación y humor.
                         Gracias a estos conocimientos, es que construyo un personaje divertido y muy particular, ofreciendo variedad y
-                         situaciones poco cotidianas; buscando siempre el humor y asombro del público.
+                        situaciones poco cotidianas; buscando siempre el humor y asombro del público.
                         Una experiencia única de magia y humor para toda la familia.
                     </P>
 
@@ -203,47 +230,49 @@
 
     <!--Show-->
 
-<div id="show" class="second-color">
-    <script>window.twttr = (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
+    <div id="show" class="second-color">
+        <script>
+    window.twttr = (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
 
-        t._e = [];
-        t.ready = function(f) {
-            t._e.push(f);
-        };
+                t._e = [];
+                t.ready = function (f) {
+                    t._e.push(f);
+                };
 
-        return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
+                return t;
+            }(document, "script", "twitter-wjs"));
+        </script>
 
-    <div>
-        <h1 class="title-Service top-container topper">SHOWS</h1>
-    </div>
-    <div class="row top-container top topper">
-        <div class="col-lg-5 offset-lg-1 text-center top">
-            <h1 class="title-prop">Magia comica, Unipersonal</h1>
-            <p class="text-color">Un artista versátil y disparatado que combina distintas disciplinas logrando un momento único de magia y humor</p>
-            <div class="row justify-content-center">
-                <a class="twitter-share-button"
-                    href="http://magoblanche.com/posts/view/4/magia-comica-unipersonal"
-                    data-size="large">
-                    Tweet</a>
-                <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fmagoblanche.com%2Fposts%2Fview%2F4%2Fmagia-comica-unipersonal&layout=button&size=large&mobile_iframe=true&width=99&height=28&appId" width="99" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <div>
+            <h1 class="title-Service top-container topper">SHOWS</h1>
+        </div>
+        <div class="row top-container top topper">
+            <div class="col-lg-5 offset-lg-1 text-center top">
+                <h1 class="title-prop">Magia comica, Unipersonal</h1>
+                <p class="text-color">Un artista versátil y disparatado que combina distintas disciplinas logrando un momento único de magia y humor</p>
+                <div class="row justify-content-center">
+                    <a class="twitter-share-button"
+                       href="http://magoblanche.com/posts/view/4/magia-comica-unipersonal"
+                       data-size="large">
+                        Tweet
+                    </a>
+                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fmagoblanche.com%2Fposts%2Fview%2F4%2Fmagia-comica-unipersonal&layout=button&size=large&mobile_iframe=true&width=99&height=28&appId" width="99" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+            <div class="text-center col-lg-5">
+                <img src="./media/IMG-20170907-WA0004.jpg" class="rounded size-show border border-warning" alt="show">
             </div>
         </div>
-        <div class="text-center col-lg-5">
-            <img src="./media/IMG-20170907-WA0004.jpg" class="rounded size-show border border-warning" alt="show">
-        </div>
     </div>
-</div>
 
-<!--Footer-->
+    <!--Footer-->
     <div class="footer">
         <div class="col offset-lg-3 col-lg-4 float-left">
             <h5>Cel. +54 341-6472361</h5>
