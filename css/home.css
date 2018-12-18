@@ -10,15 +10,15 @@
 .firstcolor {
     background-color:#F50057;
     width: 100%;
-    height: 100%;
-    position: relative;
+    padding: 10% 0%;
 }
 
-.second-color{
+.second-color {
     height: 100%;
     width: 100%;
     position: relative;
     background-color: rgb(49, 214, 255);
+    padding-bottom: 5%;
 }
 .third-color{
     background-color: #e7288e;
@@ -56,7 +56,7 @@
 
 .navbar-button{
     background:rgba(128, 128, 128, 0.1);
-    color: white;
+    color: white!important;
     margin: 3px;
     border-radius: 3px;
     text-align: center
