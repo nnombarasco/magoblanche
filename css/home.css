@@ -40,6 +40,9 @@
     text-shadow: 5px 5px 10px #e8288e;
 }
 
+.tupper{
+    padding-top: 8%;
+}
 .top {
     margin-top: 2%;
 }
@@ -120,6 +123,10 @@ font-family: 'Permanent Marker', cursive;
     background: rgba(255, 4, 159, 0.3);
 }
 
+.bottom{
+    padding-bottom: 5%;
+}
+
 
 
 /*FOOTER*/
@@ -136,7 +143,7 @@ font-family: 'Permanent Marker', cursive;
 
 .size-show {
     height:580px;
-    width:482px;
+    width:352px;
 }
 
 .top-container.top.social-button spam {
@@ -144,7 +151,7 @@ font-family: 'Permanent Marker', cursive;
 
 }
 
-/*botón up*/
+/*botï¿½n up*/
 .boton-subir {
     display: none;
     background: #e7288e;
@@ -167,4 +174,8 @@ font-family: 'Permanent Marker', cursive;
         -ms-transform: rotate(-45deg); /* IE 9 */
         -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
         transform: rotate(-45deg);
+    }
+
+    .social-color{
+        color: white;
     }
