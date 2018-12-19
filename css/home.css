@@ -28,7 +28,7 @@
 }
 
 .four-color{
-    background-color: white;
+    background-color: rgb(250, 245, 245);
     height: 100%;
     width: 100%;
     position: relative;
@@ -49,6 +49,10 @@
 
 .topper{
     padding-top: 5%;
+}
+
+.topp{
+    padding-top: 2.5%;
 }
 
 .title-Service {
@@ -134,7 +138,6 @@ font-family: 'Permanent Marker', cursive;
     color: white;
     background: rgba(30, 30, 31, 0.8);
     padding: 3% 0%;
-    margin-bottom: 3%;
 }
 
 .margin-2-0 {
