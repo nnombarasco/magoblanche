@@ -159,6 +159,15 @@ font-family: 'Permanent Marker', cursive;
     width: 112px;
 }
 
+/*Servicios color de fondo de container*/
+
+.serv-color{
+    background-color: #02d0f5;
+    bottom: 3%;
+    top:3%;
+    padding: 3% 3%;
+}
+
 
 
 /*FOOTER*/
