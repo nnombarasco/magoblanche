@@ -126,8 +126,8 @@ font-family: 'Permanent Marker', cursive;
 
 /*tamaño img shows*/
 .img-show-sized{
-    height:200px;
-    width:190px;
+    height:190px;
+    width:176px;
 }
 
 /*titulo QuienSoy?*/
@@ -151,12 +151,25 @@ font-family: 'Permanent Marker', cursive;
     padding-bottom: 5%;
 }
 
+.row{
+    margin-left: auto !important; 
+    margin-right: auto !important;
+}
+
+.bottom-show{
+    margin-bottom: 5%; 
+}
+
+.bottom-contacto{
+    margin-bottom: 2%; 
+}
+
 /*btn enviar*/
 .prop-btn {
     font-family: 'Lobster', cursive;
     color: white;
-    font-size: 20px;
-    width: 112px;
+    font-size: 29px;
+    width: 45%;
 }
 
 /*Servicios color de fondo de container*/
@@ -183,7 +196,8 @@ font-family: 'Permanent Marker', cursive;
 
 .size-show {
     height:555px;
-    width:352px;
+    width:350px;
+    margin-left: -1px;
 }
 
 .top-container.top.social-button spam {
@@ -215,7 +229,7 @@ font-family: 'Permanent Marker', cursive;
         -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
         transform: rotate(-45deg);
     }
-
+    /*botones de facebook instagram y twitter*/
     .social-color{
         color: white;
     }
