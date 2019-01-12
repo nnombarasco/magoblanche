@@ -233,3 +233,28 @@ font-family: 'Permanent Marker', cursive;
     .social-color{
         color: white;
     }
+
+.carta-box {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    perspective: 1000px;
+}
+
+    .carta-box:hover .carta {
+        transform: rotateY(180deg);
+    }
+
+.carta {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+    .cara.detras {
+        transform: rotateY(180deg);
+    }
