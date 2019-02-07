@@ -211,6 +211,8 @@ section{
     color: white;
     background: rgba(30, 30, 31, 0.8);
     padding: 3% 0%;
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
 }
 
 .margin-2-0 {
