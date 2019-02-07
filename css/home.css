@@ -1,10 +1,42 @@
+body{
+    font-family: 'Slabo 13px', serif;
+    color:white;
+    font-size: 16px;
+}
+
+section{
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.vertical-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.carousel{
+    border-radius: 5px;    
+    overflow: hidden;
+    max-width: 100%;
+    width: fit-content;
+    margin: auto;
+}
+
+.carousel-item > img , #show img{
+    object-fit: cover;
+    object-position: top;
+}
 
 .principal {
     background-image: url("./../media/theatre.png");
     background-size: cover;
+    background-color: #1D0F84;
     width:100%;
-    height:100%;
-    padding-bottom: 10%;
+    height:100vh;
+    /* padding-bottom: 10%; */
 }
 
 .firstcolor {
@@ -102,27 +134,19 @@
     margin-top: 5rem;
 }
 
-/*TipoGrafias*/
-font-family: 'Slabo 27px', serif;
-font-family: 'Lobster', cursive;
-font-family: 'Permanent Marker', cursive;
 /*contenedor de imagene, carousel */
-.border-box {
+/* .border-box {
     border: 10px solid;
     box-shadow: 5px 10px #e00606;
-}
+} */
 
 /*Parrafo de Quien soy?*/
-.text-color {
-    font-family: 'Slabo', serif;
-    color:black;
-    font-size: 20px;
-}
 /*parrafo shows*/
 .text-show {
-    font-family: 'Slabo', serif;
-    color:black;
-    font-size: 27px;
+    font-family: 'Slabo 27px', serif;
+    font-family: 'Slabo 13px', serif;
+    color:white;
+    font-size: 16px;
 }
 
 /*tamaño img shows*/
@@ -142,12 +166,6 @@ font-family: 'Permanent Marker', cursive;
     color: white;
     font-size: 35px;
 }
-
-/*fondo del container principal de la pag quien soy?*/
-.background {
-    background: rgba(255, 4, 159, 0.3);
-}
-
 
 .bottom{
     padding-bottom: 5%;
@@ -176,11 +194,14 @@ font-family: 'Permanent Marker', cursive;
 
 /*Servicios color de fondo de container*/
 
-.serv-color{
-    background-color: #02d0f5;
+#servicios > .container > .row{
     bottom: 3%;
     top:3%;
     padding: 8% 3%;
+}
+
+#servicios > .container > .flex-row-reverse {
+    background-color: #02d0f5;
 }
 
 
@@ -241,6 +262,7 @@ font-family: 'Permanent Marker', cursive;
     height: 250px;
     position: relative;
     perspective: 1000px;
+    margin: 30px auto;
 }
 
     .carta-box:hover .carta {
