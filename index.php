@@ -28,7 +28,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="./css/home.css" type="text/css" rel="stylesheet" />
     <link href="./media/favicon.ico" type="image/x-icon" rel="shortcut icon" />
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Slabo+27px" rel="stylesheet">
@@ -37,7 +36,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+13px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.4.8/dist/ionicons.js"></script>
+    <link href="./css/home.css" type="text/css" rel="stylesheet" />
     <title>Mago Blanche</title>
 </head>
 <body>
@@ -70,7 +72,7 @@
     </script>
 
     <!--Principal-->
-    <div class="principal h-100 f">
+    <section class="principal">
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
             <a class="navbar-brand blanche-button" href="#imagentop">BLANCHE</a>
@@ -104,45 +106,43 @@
                 <img class="mago-img" src="./media/mago.png" alt="mago blanche" />
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!--Quien soy-->
-    <div id="quiensoy" class="firstcolor">
-        <div class="container-fluid">
-            <div class="row justify-content-center background">
-                <div class="col-xs-12 col-lg-3">
-                    <div class="border-box">
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-30 img-thumbnail" src="./media/quiensoy/asd2.jpg" alt="First slide" style="height:425px; width:350px;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-70 img-thumbnail" src="./media/quiensoy/DSC8147.jpg" alt="Second slide" style="height:425px; width:350px;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-70 img-thumbnail" src="./media/quiensoy/DSC8157.jpg" alt="Third slide" style="height:425px; width:350px;">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-70 img-thumbnail" src="./media/quiensoy/DSC8153.jpg" alt="four slide" style="height:425px; width:350px;">
-                                </div>
+    <section id="quiensoy" class="firstcolor">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xs-12 col-lg-6">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block" src="./media/quiensoy/asd2.jpg" alt="First slide" style="height:425px; width:350px;">
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                            <div class="carousel-item">
+                                <img class="d-block" src="./media/quiensoy/DSC8147.jpg" alt="Second slide" style="height:425px; width:350px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" src="./media/quiensoy/DSC8157.jpg" alt="Third slide" style="height:425px; width:350px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block" src="./media/quiensoy/DSC8153.jpg" alt="four slide" style="height:425px; width:350px;">
+                            </div>
                         </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-6">
                     </br>
-                    <h3 class="title-quiensoy">QUIEN SOY?</h3>
-                    <P class="text-justify text-color">
+                    <h3 class="title-quiensoy margin-8-percent">QUIEN SOY?</h3>
+                    <P class="text-justify ">
                         Mi nombre es Matias Blanche, nacido en la ciudad de Rosario, provincia de Santa Fe, Argentina.
                         A los 16 años de edad, comencé mis estudios en el arte de la Magia, orientado por un reconocido mago rosarino.
                         Con el correr de los años, incrementé mis conocimientos asistiendo a congresos, conferencias, y realizando diversos
@@ -155,132 +155,144 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!--Servicios-->
-    <div id="servicios" class="second-color">
+    <section id="servicios" class="second-color">
         <div>
             <h1 class="title-Service top-container topper">SERVICIOS</h1>
         </div>
-        <div class="row top-container topper">
-            <div class="offset-lg-1 col-lg-3">
-                <div class="carta-box">
-                    <div class="carta">
-                        <div class="cara justify-content-center">
-                            <img class="rounded-circle border border-warning" src="./media/cartas/corazon2.png" width="270" height="270px">
-                        </div>
-                        <div class="cara detras justify-content-center">
-                            <img class="rounded-circle border border-warning" src="./media/servicios/received.jpeg" width="270" height="270px">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <h3 class="title-prop top-container topper top text-center">Magia Infantil</h3>
-                <p class="text-justify text-color ">
-                    Un show que combina magia, clown, globología y humor, pensado especialmente para niños.
-                    Se utilizan elementos coloridos que atraen la atención de los niños.
-                    Un show para chicos, que también disfrutan los grandes.
-                </p>
-            </div>
-        </div>
-        <div class="top row serv-color">
-            <div class="offset-lg-1 col-lg-6">
-                <h3 class="title-prop top-container topper top text-center">Magia y Humor para adultos</h3>
-                <br/>
-                <p class="text-justify text-color ">Ideal para cumpleaños, eventos empresariales, casamientos, despedidas, ocasiones especiales.</p>
-            </div>
-            <div class="col-lg-3">
-                <div class="carta-box">
-                    <div class="carta">
-                        <div class="cara">
-                            <img class="rounded-circle border border-warning" src="./media/cartas/picas2.png" width="270" height="270px">
-                        </div>
-                        <div class="cara detras">
-                            <img class="rounded-circle border border-warning" src="./media/servicios/DSC-0042.JPG" width="270" height="270px">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="margin-8-percent row top">
-            <div class="offset-lg-1 col-lg-3">
-                <div class="carta-box">
-                    <div class="carta">
-                        <div class="cara">
-                            <img class="rounded-circle border border-warning" src="./media/cartas/diamante2.png" width="270" height="270px">
-                        </div>
-                        <div class="cara detras">
-                            <img class="rounded-circle border border-warning" src="./media/servicios/recepcion.png" width="270" height="270px">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+            <div class="row flex-row-reverse">
                 <div class="col-lg-6">
-                    <h3 class="title-prop top-container topper top text-center">Recepciones</h3>
-                    <p class="text-justify text-color ">
+                    <h3 class="title-prop top-container topper top margin-8-percent">Magia Infantil</h3>
+                    <p class="text-justify  ">
+                        Un show que combina magia, clown, globología y humor, pensado especialmente para niños.
+                        Se utilizan elementos coloridos que atraen la atención de los niños.
+                        Un show para chicos, que también disfrutan los grandes.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="carta-box">
+                        <div class="carta">
+                            <div class="cara">
+                                <img class="rounded-circle border border-warning" src="./media/cartas/corazon2.png" width="270" height="270px">
+                            </div>
+                            <div class="cara detras">
+                                <img class="rounded-circle border border-warning" src="./media/servicios/received.jpeg" width="270" height="270px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="title-prop top-container topper top">Magia y Humor para adultos</h3>
+                    <br/>
+                    <p class="text-justify  ">Ideal para cumpleaños, eventos empresariales, casamientos, despedidas, ocasiones especiales.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="carta-box">
+                        <div class="carta">
+                            <div class="cara">
+                                <img class="rounded-circle border border-warning" src="./media/cartas/picas2.png" width="270" height="270px">
+                            </div>
+                            <div class="cara detras">
+                                <img class="rounded-circle border border-warning" src="./media/servicios/DSC-0042.JPG" width="270" height="270px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6">
+
+                    <h3 class="title-prop top-container topper top">Recepciones</h3>
+                    <br />
+                    <p class="text-justify  ">
                         Comúnmente conocido como magia de cerca, o close up, donde la magia ocurre frente a los ojos de los invitados, e incluso en sus mismas manos.
                         Se utilizan elementos como cartas, anillos, bandas elásticas, pañuelos y, en ocasiones, elementos que puedan proporcionar los mismos invitados.
                         Se realizan efectos rápidos y sorpresivos, ofreciendo además la cuota de humor que caracteriza al artista.
                         Magia llevada hacia el invitado, donde todo ocurrirá tan cerca que su asombro será inevitable.
                     </p>
                 </div>
-            </div>
-        <div class="top row serv-color">
-            <div class="offset-lg-1 col-lg-6">
-                <h3 class="title-prop top-container top topper text-center">Apariciones de Agasajados</h3>
-                <br/>
-                <p class="text-justify text-color ">Tenga una aparición única en su evento. El mago presenta una pequeña rutina de efectos rápidos y visuales, para luego dar paso a la aparición del agasajado; logrando así una entrada única e inigualable, la cual nadie olvidará.</p>
-            </div>
-            <div class="col-lg-3">
-                <div class="carta-box">
-                    <div class="carta">
-                        <div class="cara">
-                            <img class="rounded-circle border border-warning" src="./media/cartas/trebol2.png" width="270" height="270px">
-                        </div>
-                        <div class="cara detras">
-                            <img class="rounded-circle border border-warning" src="./media/servicios/caja.png" width="270" height="270px">
+                <div class="col-lg-6 align-self-start">
+                    <div class="carta-box">
+                        <div class="carta">
+                            <div class="cara">
+                                <img class="rounded-circle border border-warning" src="./media/cartas/diamante2.png" width="270" height="270px">
+                            </div>
+                            <div class="cara detras">
+                                <img class="rounded-circle border border-warning" src="./media/servicios/recepcion.png" width="270" height="270px">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-1 col-lg-6">
+                    <h3 class="title-prop top-container top topper">Apariciones de Agasajados</h3>
+                    <br/>
+                    <p class="text-justify  ">Tenga una aparición única en su evento. El mago presenta una pequeña rutina de efectos rápidos y visuales, para luego dar paso a la aparición del agasajado; logrando así una entrada única e inigualable, la cual nadie olvidará.</p>
+                </div>
+                <div class="col-lg-3">
+                    <div class="carta-box">
+                        <div class="carta">
+                            <div class="cara">
+                                <img class="rounded-circle border border-warning" src="./media/cartas/trebol2.png" width="270" height="270px">
+                            </div>
+                            <div class="cara detras">
+                                <img class="rounded-circle border border-warning" src="./media/servicios/caja.png" width="270" height="270px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!--Contacto-->
-    <div id="contacto" class="four-color">
-        <div class="contacto topp">
-            <h1 class="text-center top title-Service">CONTACTO</h1>
-            <form action="index.php" method="post">
-                <div class="row">
+    <section id="contacto" class="four-color">
+        <div class="container topp">
+            <div class="d-flex justify-content-center margin-8-percent">
+                <h1 class="text-center top title-Service">CONTACTO</h1>
+            </div>
+            <form>
+                <div class="row d-flex justify-content-center">
                     <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input name="nombre" type="text" class="form-control" placeholder="Nombre" required>
+                        <input type="text" class="form-control" placeholder="Nombre">
                     </div>
                     <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input  name="email" type="email" class="form-control" placeholder="Email" required>
+                        <input type="email" class="form-control" placeholder="Email">
                     </div>
                     <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input name="telefono" type="text" class="form-control" placeholder="Telefono" required>
+                        <input type="text" class="form-control" placeholder="Telefono">
                     </div>
                     <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input name="asunto" type="text" class="form-control" placeholder="Asunto" required>
+                        <input type="text" class="form-control" placeholder="Asunto">
                     </div>
                     <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                        <textarea name="mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje" required></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
                     </div>
                 </div>
-                <div class="offset-lg-8 text-center margin-2-0 ">
-                    <input class="bottom-contacto btn btn-info prop-btn btn-lg" type="submit" value="Enviar">
+                <div class="text-center margin-2-0 margin-8-percent">
+                    <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
                 </div>
             </form>
         </div>
-    </div>
+    </section>
 
     <!--Show-->
 
-    <div id="show" class="second-color">
+    <section id="show" class="second-color">
         <script>
     window.twttr = (function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0],
@@ -300,32 +312,36 @@
             }(document, "script", "twitter-wjs"));
         </script>
 
-        <div>
-            <h1 class="title-Service top-container topper">SHOWS</h1>
-        </div>
-        <div class="row top-container topper col-xs-12">
-            <div class="col-lg-5 offset-lg-1 text-center top">
-                <h1 class="title-prop">Magia comica, Unipersonal</h1>
-                <p class="text-show">Un artista versátil y disparatado que combina distintas disciplinas logrando un momento único de magia y humor</p>
-                <div class="row bottom justify-content-center topper">
-                    <a class="twitter-share-button"
-                       href="http://magoblanche.com/posts/view/4/magia-comica-unipersonal"
-                       data-size="large">
-                        Tweet
-                    </a>
-                    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fmagoblanche.com%2Fposts%2Fview%2F4%2Fmagia-comica-unipersonal&layout=button&size=large&mobile_iframe=true&width=99&height=28&appId" width="99" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+        <div class="container">
+            <div class="row d-flex justify-content-center margin-8-percent">
+                <h1 class="title-Service top-container topper">SHOWS</h1>
+            </div>
+            <div class="row flex-row-reverse justify-content-center">
+                <div class="text-center col-xs-12 col-lg-4">
+                    <img src="./media/IMG-20170907-WA0004.jpg" class=" img-responsive size-show border border-warning" alt="show">
                 </div>
-                <div class="row justify-content-center topper bottom-show">
-                    <img src="./media/show/IMG-20170907-WA0005.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
-                    <img src="./media/show/IMG-20170907-WA0007.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
-                    <img src="./media/show/IMG-20170907-WA0009.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
+                <div class="col-lg-8 text-center">
+                    <div class="container margin-8-percent">
+                        <h1 class="title-prop">Magia comica, Unipersonal</h1>
+                        <p class="text-show">Un artista versátil y disparatado que combina distintas disciplinas logrando un momento único de magia y humor</p>
+                        <div class="row bottom justify-content-center topper">
+                            <a class="twitter-share-button"
+                            href="http://magoblanche.com/posts/view/4/magia-comica-unipersonal"
+                            data-size="large">
+                                Tweet
+                            </a>
+                            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fmagoblanche.com%2Fposts%2Fview%2F4%2Fmagia-comica-unipersonal&layout=button&size=large&mobile_iframe=true&width=99&height=28&appId" width="99" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <img src="./media/show/IMG-20170907-WA0005.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
+                        <img src="./media/show/IMG-20170907-WA0007.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
+                        <img src="./media/show/IMG-20170907-WA0009.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
+                    </div>
                 </div>
             </div>
-            <div class="margin-left--9 text-center offset-xs-1 col-xs-5 col-lg-5">
-                <img src="./media/IMG-20170907-WA0004.jpg" class=" img-responsive size-show border border-warning" alt="show">
-            </div>
         </div>
-    </div>
+    </section>
 
     
     <!-- Footer -->
@@ -340,7 +356,7 @@
         <!-- Grid column -->
         <div class="col-md-6 mt-md-0 mt-3">
           <!-- Content -->
-          <h5 class="text-uppercase">Matias Blanche</h5>
+          <p class="text-uppercase">Matias Blanche</p>
           <p>TEL: +54 341-6472361.</p>
           <p>MAIL: matiaseblanche@hotmail.com</p>
             <!--Facebook-->
@@ -350,8 +366,8 @@
         <hr class="clearfix w-100 d-md-none pb-3">
 
         <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-            <ul class=" tupper top list-unstyled list-inline text-center">
+        <div class="col-md-6 mb-md-0 mb-3 vertical-center">
+            <ul class="list-unstyled list-inline text-center container">
                 <li class="list-inline-item">
                     <!-- Facebook -->
                     <a href="https://www.facebook.com/magoblanche/" class="fb-ic social-color">
