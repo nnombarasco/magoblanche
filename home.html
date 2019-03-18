@@ -55,7 +55,7 @@
     <section class="principal">
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-            <a class="navbar-brand blanche-button" href="#imagentop">BLANCHE</a>
+            <a class="navbar-brand blanche-button" href="#imagentop">MAGO BLANCHE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -78,12 +78,25 @@
         </nav>
 
         <!--Imagenes de Inicio-->
-        <div id="imagentop" class="container-fluid">
-            <div>
-                <img class="float-left blanche-img" src="./media/blanche.png" alt="balnche" />
+        <div class="container-fluid d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 flex-column d-flex justify-content-center">
+                        <img class="w-100" src="./media/blanche.png" alt="blanche" />
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="./media/mago.png" alt="mago blanche" />
+                    </div>
+                </div>
             </div>
-            <div>
-                <img class="mago-img" src="./media/mago.png" alt="mago blanche" />
+        </div>
+        <div class="text-center container-fluid d-lg-none d-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="./media/mago_mobile.png" alt="mago blanche" />
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -245,22 +258,22 @@
             <div class="d-flex justify-content-center margin-8-percent">
                 <h1 class="text-center top title-Service">CONTACTO</h1>
             </div>
-            <form>
+            <form method="POST">
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" class="form-control" placeholder="Nombre">
+                        <input type="text" name="Nombre" class="form-control" placeholder="Nombre">
                     </div>
                     <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="email" name="Email" class="form-control" placeholder="Email">
                     </div>
                     <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" class="form-control" placeholder="Telefono">
+                        <input type="text" name="Telefono" class="form-control" placeholder="Telefono">
                     </div>
                     <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="text" class="form-control" placeholder="Asunto">
+                        <input type="text" name="Asunto" class="form-control" placeholder="Asunto">
                     </div>
                     <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
+                        <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
                     </div>
                 </div>
                 <div class="text-center margin-2-0 margin-8-percent">
