@@ -72,10 +72,10 @@
     </script>
 
     <!--Principal-->
-    <section class="principal">
+    <section id="inicio" class="principal">
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
-            <a class="navbar-brand blanche-button" href="#imagentop">MAGO BLANCHE</a>
+            <a class="navbar-brand blanche-button" href="#inicio">MAGO BLANCHE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -174,7 +174,7 @@
     <!--Servicios-->
     <section id="servicios" class="second-color">
         <div>
-            <h1 class="title-Service top-container topper">SERVICIOS</h1>
+            <h1 class="title-Service top-container topper margin-8-percent">SERVICIOS</h1>
         </div>
         <div class="container">
             <div class="row flex-row-reverse">
@@ -186,14 +186,16 @@
                         Un show para chicos, que también disfrutan los grandes.
                     </p>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-center">
                     <div class="carta-box">
                         <div class="carta">
                             <div class="cara">
-                                <img class="rounded-circle border border-warning" src="./media/cartas/corazon2.png" width="270" height="270px">
+                                <img class="rounded-circle" src="./media/cartas/corazon2.png" width="270" height="270px">
                             </div>
                             <div class="cara detras">
-                                <img class="rounded-circle border border-warning" src="./media/servicios/received.jpeg" width="270" height="270px">
+                                <div class="image-container rounded-circle">
+                                    <img src="./media/servicios/received.jpeg">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -211,10 +213,12 @@
                     <div class="carta-box">
                         <div class="carta">
                             <div class="cara">
-                                <img class="rounded-circle border border-warning" src="./media/cartas/picas2.png" width="270" height="270px">
+                                <img class="rounded-circle" src="./media/cartas/picas2.png" width="270" height="270px">
                             </div>
                             <div class="cara detras">
-                                <img class="rounded-circle border border-warning" src="./media/servicios/DSC-0042.JPG" width="270" height="270px">
+                                <div class="image-container rounded-circle">
+                                    <img src="./media/servicios/DSC-0042.JPG">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -238,10 +242,12 @@
                     <div class="carta-box">
                         <div class="carta">
                             <div class="cara">
-                                <img class="rounded-circle border border-warning" src="./media/cartas/diamante2.png" width="270" height="270px">
+                                <img class="rounded-circle" src="./media/cartas/diamante2.png" width="270" height="270px">
                             </div>
                             <div class="cara detras">
-                                <img class="rounded-circle border border-warning" src="./media/servicios/recepcion.png" width="270" height="270px">
+                                <div class="image-container rounded-circle">
+                                    <img src="./media/servicios/recepcion.png">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -259,10 +265,12 @@
                     <div class="carta-box">
                         <div class="carta">
                             <div class="cara">
-                                <img class="rounded-circle border border-warning" src="./media/cartas/trebol2.png" width="270" height="270px">
+                                <img class="rounded-circle" src="./media/cartas/trebol2.png" width="270" height="270px">
                             </div>
                             <div class="cara detras">
-                                <img class="rounded-circle border border-warning" src="./media/servicios/caja.png" width="270" height="270px">
+                                <div class="image-container rounded-circle">
+                                    <img src="./media/servicios/caja.png">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -274,32 +282,60 @@
 
     <!--Contacto-->
     <section id="contacto" class="four-color">
-        <div class="container topp">
+        <div class="container">
             <div class="d-flex justify-content-center margin-8-percent">
                 <h1 class="text-center top title-Service">CONTACTO</h1>
             </div>
-            <form method="POST">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" name="Nombre" class="form-control" placeholder="Nombre">
-                    </div>
-                    <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="email" name="Email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" name="Telefono" class="form-control" placeholder="Telefono">
-                    </div>
-                    <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="text" name="Asunto" class="form-control" placeholder="Asunto">
-                    </div>
-                    <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                        <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
-                    </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <form method="POST">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
+                                <input type="text" name="Nombre" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="col-sm-12 col-lg-10 margin-2-0">
+                                <input type="email" name="Email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
+                                <input type="text" name="Telefono" class="form-control" placeholder="Telefono">
+                            </div>
+                            <div class="col-sm-12 col-lg-10 margin-2-0">
+                                <input type="text" name="Asunto" class="form-control" placeholder="Asunto">
+                            </div>
+                            <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
+                                <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center margin-2-0 margin-8-percent">
+                            <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="text-center margin-2-0 margin-8-percent">
-                    <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
+                <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                <ul class="list-unstyled text-center container">
+                    <li class="list-item">
+                        <a href="https://wa.me/543413542015" target="_blank" class="ins-ic text-secondary social-color">
+                            <i class="fab fa-whatsapp fa-lg mr-md-5 mr-3 fa-2x"></i>
+                            <p class="d-inline">+54 341-6472361</p>
+                        </a>
+                        
+                    </li>
+                    <li class="list-item">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/magoblanche/" target="_blank" class="fb-ic text-secondary social-color">
+                            <i class="fab fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i>
+                            <p class="d-inline">/magoblanche</p>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://www.instagram.com/magoblanche/" target="_blank" class="ins-ic text-secondary social-color ">
+                            <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
+                            <p class="d-inline">/magoblanche</p>
+                        </a>
+                    </li>
+                </ul>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -326,15 +362,15 @@
         </script>
 
         <div class="container">
-            <div class="row d-flex justify-content-center margin-8-percent">
-                <h1 class="title-Service top-container topper">SHOWS</h1>
+            <div class="row d-flex justify-content-center">
+                <h1 class="title-Service top-container topper margin-8-percent">SHOWS</h1>
             </div>
             <div class="row flex-row-reverse justify-content-center">
                 <div class="text-center col-xs-12 col-lg-4">
-                    <img src="./media/IMG-20170907-WA0004.jpg" class=" img-responsive size-show border border-warning" alt="show">
+                    <img src="./media/IMG-20170907-WA0004.jpg" class="margin-8-percent img-responsive size-show" alt="show">
                 </div>
                 <div class="col-lg-8 text-center">
-                    <div class="container margin-8-percent">
+                    <div class="container">
                         <h1 class="title-prop">Magia comica, Unipersonal</h1>
                         <p class="text-show">Un artista versátil y disparatado que combina distintas disciplinas logrando un momento único de magia y humor</p>
                         <div class="row bottom justify-content-center topper">
@@ -347,9 +383,9 @@
                         </div>
                     </div>
                     <div class="row d-flex justify-content-center">
-                        <img src="./media/show/IMG-20170907-WA0005.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
-                        <img src="./media/show/IMG-20170907-WA0007.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
-                        <img src="./media/show/IMG-20170907-WA0009.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle border border-warning img-show-sized">
+                        <img src="./media/show/IMG-20170907-WA0005.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle img-show-sized">
+                        <img src="./media/show/IMG-20170907-WA0007.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle img-show-sized">
+                        <img src="./media/show/IMG-20170907-WA0009.jpg" alt="..." class="margin-4-percent img-responsive rounded-circle img-show-sized">
                     </div>
                 </div>
             </div>
@@ -364,48 +400,37 @@
     <div class="container-fluid text-center text-md-left">
 
       <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-          <!-- Content -->
-          <p class="text-uppercase">Matias Blanche</p>
-          <p>TEL: +54 341-6472361.</p>
-          <p>MAIL: matiaseblanche@hotmail.com</p>
-            <!--Facebook-->
+      <div class="container">
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-12 mt-md-0 mb-3 text-center">
+            <!-- Content -->
+            <p>MATIAS BLANCHE - +54 341-6472361 - matiaseblanche@hotmail.com</p>
+                <!--Facebook-->
+            </div>
+            <!-- Grid column -->
+            <div class="col-md-12 mb-md-0 mb-3 vertical-center text-center">
+                <ul class="list-unstyled list-inline text-center container">
+                    <li class="list-inline-item">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/magoblanche/" target="_blank" class="fb-ic social-color">
+                            <i class="fab fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/magoblanche/" target="_blank" class="ins-ic social-color">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>  
+            <!-- <hr class="clearfix w-100 d-md-none"> -->
         </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mb-md-0 mb-3 vertical-center">
-            <ul class="list-unstyled list-inline text-center container">
-                <li class="list-inline-item">
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/magoblanche/" class="fb-ic social-color">
-                        <i class="fab fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.instagram.com/magoblanche/" class="ins-ic social-color">
-                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                </li>
-                
-                <li class="list-inline-item">
-                    <!-- Twitter -->
-                    <a class="tw-ic">
-                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                    </a>
-                </li>
-            </ul>
-        </div>  
     </div>
     <!-- Copyright -->
-    <div class="footer-copyright text-center bg-secondary py-3">© 2018 Copyright:
-      <a href=""> </a>
-    </div>
+    <div class="footer-copyright text-center py-3">© 2019 Copyright: Matias Blanche</div>
+      <!-- <a href=""> </a> -->
+    
     <!-- Copyright -->
 
 </footer>
