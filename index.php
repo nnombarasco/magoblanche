@@ -68,13 +68,13 @@
             }, 700); //el valor 700 indica que lo ara en 700 mili segundos
             return false; //rompe el bucle
         });
-
+        
     </script>
 
     <!--Principal-->
     <section id="inicio" class="principal">
         <!--navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top" id="nav-main">
             <a class="navbar-brand blanche-button" href="#inicio">MAGO BLANCHE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -101,10 +101,10 @@
         <div class="container-fluid d-none d-lg-block">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7 flex-column d-flex justify-content-center">
+                    <div class="col-lg-8 flex-column d-flex justify-content-center">
                         <img class="w-100" src="./media/blanche.png" alt="blanche" />
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-4">
                         <img src="./media/mago.png" alt="mago blanche" />
                     </div>
                 </div>
@@ -286,7 +286,32 @@
             <div class="d-flex justify-content-center margin-8-percent">
                 <h1 class="text-center top title-Service">CONTACTO</h1>
             </div>
-            <div class="row">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                    <ul class="list-unstyled text-center container">
+                        <li class="list-item">
+                            <a href="https://wa.me/543413542015" target="_blank" class="ins-ic text-secondary social-color">
+                                <i class="float-left fab fa-whatsapp fa-lg mr-md-5 mr-3 fa-2x"></i>
+                                <p class="d-inline">+54 341-6472361</p>
+                            </a>
+                            
+                        </li>
+                        <li class="list-item">
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/magoblanche/" target="_blank" class="fb-ic text-secondary social-color">
+                                <i class="float-left fab fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i>
+                                <p class="d-inline">/magoblanche</p>
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="https://www.instagram.com/magoblanche/" target="_blank" class="ins-ic text-secondary social-color ">
+                                <i class="float-left fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
+                                <p class="d-inline">/magoblanche</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="clearfix w-100 d-lg-none">
                 <div class="col-lg-6 col-md-12">
                     <form method="POST">
                         <div class="row d-flex justify-content-center">
@@ -310,30 +335,6 @@
                             <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
                         </div>
                     </form>
-                </div>
-                <div class="col-lg-6 col-md-12 d-flex justify-content-center">
-                <ul class="list-unstyled text-center container">
-                    <li class="list-item">
-                        <a href="https://wa.me/543413542015" target="_blank" class="ins-ic text-secondary social-color">
-                            <i class="fab fa-whatsapp fa-lg mr-md-5 mr-3 fa-2x"></i>
-                            <p class="d-inline">+54 341-6472361</p>
-                        </a>
-                        
-                    </li>
-                    <li class="list-item">
-                        <!-- Facebook -->
-                        <a href="https://www.facebook.com/magoblanche/" target="_blank" class="fb-ic text-secondary social-color">
-                            <i class="fab fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i>
-                            <p class="d-inline">/magoblanche</p>
-                        </a>
-                    </li>
-                    <li class="list-item">
-                        <a href="https://www.instagram.com/magoblanche/" target="_blank" class="ins-ic text-secondary social-color ">
-                            <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
-                            <p class="d-inline">/magoblanche</p>
-                        </a>
-                    </li>
-                </ul>
                 </div>
             </div>
         </div>
