@@ -1,23 +1,26 @@
-﻿<!--<?php
+﻿<?php
+
+	if(isset($nombre, $email, $telefono, $titulo, $mensaje) && (!empty(['$_POST']))){
+		//datos para el correo
+		$destinatario = "rgonzalezfro@gmail.com";
+		$asunto = "Contacto desde la web";
+
+		$carta = "De: $nombre \n";
+		$carta .= "Correo: $email \n";
+		$carta .= "Telefono: $telefono \n";
+		$carta .= "Asunto : $titulo \n";
+		$carta .= "Mensaje: $mensaje";
+	
+		//enviando mensaje
+		mail($destinatario, $asunto, $carta);
+	}
 	$nombre = $_POST['nombre'];
 	$email = $_POST['email'];
 	$telefono = $_POST['telefono'];
 	$titulo = $_POST['asunto'];
 	$mensaje = $_POST['mensaje'];
 
-	//datos para el correo
-	$destinatario = "rgonzalezfro@gmail.com";
-	$asunto = "Contacto desde la web";
-
-	$carta = "De: $nombre \n";
-	$carta .= "Correo: $email \n";
-	$carta .= "Telefono: $telefono \n";
-	$carta .= "Asunto : $titulo \n";
-	$carta .= "Mensaje: $mensaje";
-
-	//enviando mensaje
-	mail($destinatario, $asunto, $carta);
-?>-->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +35,8 @@
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
@@ -278,36 +282,41 @@
             <div class="d-flex justify-content-center margin-8-percent">
                 <h1 class="text-center top title-Service">CONTACTO</h1>
             </div>
-            <form method="POST">
+            <form action="/index.php" method="POST">
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" name="Nombre" class="form-control" placeholder="Nombre">
+                        <input type="text" id="Nombre" name="Nombre" class="form-control" placeholder="Nombre">
                     </div>
                     <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="email" name="Email" class="form-control" placeholder="Email">
+                        <input type="email" id="Email" name="Email" class="form-control" placeholder="Email">
                     </div>
                     <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" name="Telefono" class="form-control" placeholder="Telefono">
+                        <input type="text" id="Telefono" name="Telefono" class="form-control" placeholder="Telefono">
                     </div>
                     <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="text" name="Asunto" class="form-control" placeholder="Asunto">
+                        <input type="text" id="Asunto" name="Asunto" class="form-control" placeholder="Asunto">
                     </div>
                     <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                        <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
+                        <textarea name="Mensaje" id="Mensaje" class="form-control" rows="3" placeholder="Mensaje"></textarea>
                     </div>
                 </div>
+				<div class="g-recaptcha" data-sitekey="http://magoblanche.com/"></div>
                 <div class="text-center margin-2-0 margin-8-percent">
                     <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
                 </div>
             </form>
         </div>
     </section>
-
+	<script>
+		var onloadCallback = function() {
+			alert("grecaptcha is ready!");
+		};
+	</script>
     <!--Show-->
 
     <section id="show" class="second-color">
         <script>
-    window.twttr = (function (d, s, id) {
+			window.twttr = (function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0],
                     t = window.twttr || {};
                 if (d.getElementById(id)) return t;
