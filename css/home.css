@@ -1,5 +1,5 @@
 body{
-    font-family: 'Slabo 13px', serif;
+    /* font-family: 'Slabo 13px', serif; */
     color:white;
     font-size: 16px;
 }
@@ -11,8 +11,23 @@ section{
     justify-content: space-around;
 }
 
+a.text-secondary:focus, a.text-secondary:hover {
+    color: #445!important;
+    text-decoration: none;
+}
+
 img {
     width: 100%;
+}
+.image-container{
+    height: 270px;
+    width: 270px;
+    overflow: hidden;
+    margin: auto;
+}
+.rounded-circle > img{
+    width: 270px;
+    object-fit: cover;
 }
 
 .vertical-center{
@@ -53,7 +68,7 @@ img {
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: rgb(49, 214, 255);
+    background-color: #02d0f5;
     padding-bottom: 5%;
 }
 .third-color{
@@ -124,7 +139,7 @@ img {
 }
 
 .navbar-button:hover{
-    background-color: #e7288e;
+    background-color: #F50057;
     color: white;
 }
 
@@ -150,7 +165,7 @@ img {
 /*titulo QuienSoy?*/
 .title-prop {
     font-family: 'Lobster', cursive;
-    color: #e7288e;
+    /* color: #e7288e; */
     font-size: 45px;
 }
 .title-quiensoy {
@@ -176,6 +191,14 @@ img {
     margin-bottom: 2%; 
 }
 
+#contacto ul{
+    margin: 15% 0px;
+}
+#contacto ul > li{
+    margin: 20px auto;
+    width: 220px;
+}
+
 /*btn enviar*/
 .prop-btn {
     font-family: 'Lobster', cursive;
@@ -192,19 +215,31 @@ img {
     padding: 8% 3%;
 }
 
-#servicios > .container > .flex-row-reverse {
+/* #servicios > .container > .flex-row-reverse {
     background-color: #02d0f5;
-}
+} */
 
+#show iframe {
+    margin: 0 5px;
+}
 
 
 /*FOOTER*/
 .footer {
     color: white;
     background: rgba(30, 30, 31, 0.8);
-    padding: 3% 0%;
+    /* padding: 3% 0%; */
     font-family: 'Roboto', sans-serif;
     font-size: small;
+}
+
+footer li{
+    width: 20px;
+    margin: 0px 15px;
+}
+.footer-copyright{
+    color: rgba(200, 200, 205, 0.8);
+    font-style: italic;
 }
 
 .margin-2-0 {
