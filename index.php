@@ -294,16 +294,16 @@
             <form action="/index.php" method="POST">
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" id="Nombre" name="Nombre" class="form-control" placeholder="Nombre">
+                        <input type="text" id="Nombre" name="Nombre" class="form-control" placeholder="Nombre" required>
                     </div>
                     <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="email" id="Email" name="Email" class="form-control" placeholder="Email">
+                        <input type="email" id="Email" name="Email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" id="Telefono" name="Telefono" class="form-control" placeholder="Telefono">
+                        <input type="text" id="Telefono" name="Telefono" class="form-control" placeholder="Telefono" required>
                     </div>
                     <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="text" id="Asunto" name="Asunto" class="form-control" placeholder="Asunto">
+                        <input type="text" id="Asunto" name="Asunto" class="form-control" placeholder="Asunto" required>
                     </div>
                     <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
                         <textarea name="Mensaje" id="Mensaje" class="form-control" rows="3" placeholder="Mensaje"></textarea>
