@@ -31,6 +31,25 @@
 
     <!-- script para que funcione al 100% el botón ir arriba -->
     <script>
+
+        //Funcion inicial para establecer si debe renderizar el dropdown
+        $(document).ready(function() {
+            if ($(document).width() > 991) {
+                $(".dropdown-custom").hide();
+            } else {
+                $(".dropdown-custom").show();
+            }
+        });
+        
+        //Funcion para cuando la pantalla cambie su resolucion consultar por la misma para ocultar el dropdown
+        $(window).resize(function() {
+            if ($(window).width() > 991) {
+                $(".dropdown-custom").hide();
+            } else {
+                $(".dropdown-custom").show();
+            }
+        });
+
         //invocamos al objeto (window) y a su método (scroll), solo se ejecutara si el usuario hace scroll en la página
         $(window).scroll(function () {
             if ($(this).scrollTop() > 300) { //condición a cumplirse cuando el usuario aya bajado 301px a más.
@@ -48,6 +67,7 @@
             }, 700); //el valor 700 indica que lo ara en 700 mili segundos
             return false; //rompe el bucle
         });
+        
 
     </script>
 
@@ -56,7 +76,7 @@
         <!--navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
             <a class="navbar-brand blanche-button" href="#imagentop">MAGO BLANCHE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="dropdown-toggler dropdown-custom" type="button" data-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
