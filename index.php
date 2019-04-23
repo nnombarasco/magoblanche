@@ -1,24 +1,28 @@
-﻿<?php
-
-	if(isset($nombre, $email, $telefono, $titulo, $mensaje) && (!empty(['$_POST']))){
+﻿<?php    
+    if(!empty($_POST['Nombre']) 
+        && !empty($_POST['Email']) 
+        && !empty($_POST['Telefono']) 
+        && !empty($_POST['Asunto']) 
+        && !empty($_POST['Nombre'])) {
 		//datos para el correo
 		$destinatario = "rgonzalezfro@gmail.com";
 		$asunto = "Contacto desde la web";
-
-		$carta = "De: $nombre \n";
-		$carta .= "Correo: $email \n";
-		$carta .= "Telefono: $telefono \n";
-		$carta .= "Asunto : $titulo \n";
-		$carta .= "Mensaje: $mensaje";
-	
+        $nombre = $_POST['Nombre'];
+        $email = $_POST['Email'];
+        $telefono = $_POST['Telefono'];
+        $titulo = $_POST['Asunto'];
+        $mensaje = $_POST['Mensaje'];
 		//enviando mensaje
-		mail($destinatario, $asunto, $carta);
+        if($nombre != NULL && $email != NULL && $telefono != NULL){
+            $carta = "De: $nombre \n";
+            $carta .= "Correo: $email \n";
+            $carta .= "Telefono: $telefono \n";
+            $carta .= "Asunto : $titulo \n";
+            $carta .= "Mensaje: $mensaje";
+            
+            mail($destinatario, $asunto, $carta);
+        }
 	}
-	$nombre = $_POST['nombre'];
-	$email = $_POST['email'];
-	$telefono = $_POST['telefono'];
-	$titulo = $_POST['asunto'];
-	$mensaje = $_POST['mensaje'];
 
 ?>
 <!DOCTYPE html>
@@ -34,14 +38,15 @@
     <link href="./media/favicon.ico" type="image/x-icon" rel="shortcut icon" />
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Slabo+27px" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+13px" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@4.4.8/dist/ionicons.js"></script>
     <link href="./css/home.css" type="text/css" rel="stylesheet" />
     <title>Mago Blanche</title>
@@ -51,7 +56,7 @@
         <!-- link del icono http://fontawesome.io/icon/rocket/ -->
         <i class="fa fa-rocket" aria-hidden="true"></i>
     </a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
 
     <!-- script para que funcione al 100% el botón ir arriba -->
     <script>
@@ -72,7 +77,15 @@
             }, 700); //el valor 700 indica que lo ara en 700 mili segundos
             return false; //rompe el bucle
         });
-        
+        function goToSection(section){
+            window.location.href=section;
+            $(".navbar-collapse").removeClass("show");
+        }
+        $("#navbarSupportedContent.navbar-collapse > ul > li").on('click', function (e) {
+            e.preventDefault();
+            debugger;
+        });
+
     </script>
 
     <!--Principal-->
@@ -86,16 +99,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link navbar-button" href="#quiensoy">QUIEN SOY?</a>
+                        <a onClick="goToSection('#quiensoy');return false" class="nav-link navbar-button">QUIEN SOY?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-button" href="#servicios">SERVICIOS</a>
+                        <a onClick="goToSection('#servicios');return false" class="nav-link navbar-button">SERVICIOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-button" href="#show">SHOWS</a>
+                        <a onClick="goToSection('#show');return false" class="nav-link navbar-button">SHOWS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-button" href="#contacto">CONTACTO</a>
+                        <a onClick="goToSection('#contacto');return false" class="nav-link navbar-button">CONTACTO</a>
                     </li>
                 </ul>
             </div>
@@ -260,12 +273,12 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="offset-lg-1 col-lg-6">
+                <div class="col-lg-6">
                     <h3 class="title-prop top-container top topper">Apariciones de Agasajados</h3>
                     <br/>
                     <p class="text-justify  ">Tenga una aparición única en su evento. El mago presenta una pequeña rutina de efectos rápidos y visuales, para luego dar paso a la aparición del agasajado; logrando así una entrada única e inigualable, la cual nadie olvidará.</p>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-6">
                     <div class="carta-box">
                         <div class="carta">
                             <div class="cara">
@@ -290,29 +303,6 @@
             <div class="d-flex justify-content-center margin-8-percent">
                 <h1 class="text-center top title-Service">CONTACTO</h1>
             </div>
-<<<<<<< HEAD
-            <form action="/index.php" method="POST">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" id="Nombre" name="Nombre" class="form-control" placeholder="Nombre" required>
-                    </div>
-                    <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="email" id="Email" name="Email" class="form-control" placeholder="Email" required>
-                    </div>
-                    <div class="col-sm-12 offset-lg-1 col-lg-5 margin-2-0">
-                        <input type="text" id="Telefono" name="Telefono" class="form-control" placeholder="Telefono" required>
-                    </div>
-                    <div class="col-sm-12 col-lg-5 margin-2-0">
-                        <input type="text" id="Asunto" name="Asunto" class="form-control" placeholder="Asunto" required>
-                    </div>
-                    <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                        <textarea name="Mensaje" id="Mensaje" class="form-control" rows="3" placeholder="Mensaje"></textarea>
-                    </div>
-                </div>
-				<div class="g-recaptcha" data-sitekey="http://magoblanche.com/"></div>
-                <div class="text-center margin-2-0 margin-8-percent">
-                    <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
-=======
             <div class="row flex-row-reverse">
                 <div class="col-lg-6 col-md-12 d-flex justify-content-center">
                     <ul class="list-unstyled text-center container">
@@ -343,16 +333,16 @@
                     <form method="POST">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                                <input type="text" name="Nombre" class="form-control" placeholder="Nombre">
+                                <input type="text" name="Nombre" class="form-control" placeholder="Nombre" required>
                             </div>
                             <div class="col-sm-12 col-lg-10 margin-2-0">
-                                <input type="email" name="Email" class="form-control" placeholder="Email">
+                                <input type="email" name="Email" class="form-control" placeholder="Email" required>
                             </div>
                             <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                                <input type="text" name="Telefono" class="form-control" placeholder="Telefono">
+                                <input type="text" name="Telefono" class="form-control" placeholder="Telefono" required>
                             </div>
                             <div class="col-sm-12 col-lg-10 margin-2-0">
-                                <input type="text" name="Asunto" class="form-control" placeholder="Asunto">
+                                <input type="text" name="Asunto" class="form-control" placeholder="Asunto" required>
                             </div>
                             <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
                                 <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
@@ -362,7 +352,6 @@
                             <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
                         </div>
                     </form>
->>>>>>> 9cadb285e3fcab51f4b1f344bf800c11b409dfab
                 </div>
             </div>
         </div>
