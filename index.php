@@ -48,6 +48,7 @@
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/ionicons@4.4.8/dist/ionicons.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link href="./css/home.css" type="text/css" rel="stylesheet" />
     <title>Mago Blanche</title>
 </head>
@@ -349,6 +350,7 @@
                             </div>
                         </div>
                         <div class="text-center margin-2-0 margin-8-percent">
+                            <div class="g-recaptcha captcha-custom-style" data-sitekey="6LeN3Z8UAAAAAA4JHXNl_yJ-qC3icMJ75vAPVCrZ"></div>
                             <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
                         </div>
                     </form>
@@ -356,11 +358,6 @@
             </div>
         </div>
     </section>
-	<script>
-		var onloadCallback = function() {
-			alert("grecaptcha is ready!");
-		};
-	</script>
     <!--Show-->
 
     <section id="show" class="second-color">
