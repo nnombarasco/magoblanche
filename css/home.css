@@ -323,3 +323,15 @@ footer li{
 .margin-8-percent {
     margin: 8% 0%;
 }
+
+.dropdown-custom {
+    background-color: #17a2b8 !important;
+    border-style: none;
+}
+
+.captcha-custom-style {
+    display: inline-block;
+    margin-bottom: 2%;
+    vertical-align: middle;
+    margin-right: 2%;
+}
