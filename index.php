@@ -3,28 +3,48 @@
         && !empty($_POST['Email']) 
         && !empty($_POST['Telefono']) 
         && !empty($_POST['Asunto']) 
-        && !empty($_POST['Nombre'])) {
-		//datos para el correo
-		$destinatario = "rgonzalezfro@gmail.com";
-		$asunto = "Contacto desde la web";
-        $nombre = $_POST['Nombre'];
-        $email = $_POST['Email'];
-        $telefono = $_POST['Telefono'];
-        $titulo = $_POST['Asunto'];
-        $mensaje = $_POST['Mensaje'];
-		//enviando mensaje
-        if($nombre != NULL && $email != NULL && $telefono != NULL){
-            $carta = "De: $nombre \n";
-            $carta .= "Correo: $email \n";
-            $carta .= "Telefono: $telefono \n";
-            $carta .= "Asunto : $titulo \n";
-            $carta .= "Mensaje: $mensaje";
-            
-            mail($destinatario, $asunto, $carta);
-        }
-	}
+        && !empty($_POST['Nombre'])
+        && !empty($_POST['g-recaptcha-response'])) {
 
-?>
+            $url = 'https://www.google.com/recaptcha/api/siteverify';
+            $fields = [
+                'secret'=> '6Lce358UAAAAACYX034OJ5O68mjBf-R0kBspc8rm',
+                'response' => $_POST['g-recaptcha-response'],
+            ];
+
+            $fields_string = http_build_query($fields);
+
+            $ch = curl_init();
+
+            curl_setopt($ch,CURLOPT_URL, $url);
+            curl_setopt($ch,CURLOPT_POST, true);
+            curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+
+            curl_setopt($ch,CURLOPT_RETURNTRANSFER, true); 
+
+            $result = json_decode(curl_exec($ch), true);
+            curl_close($ch);
+
+            if (!empty($result['success']) && $result['success'] == true) { 
+            $destinatario = "rgonzalezfro@gmail.com"; //TODO: REPLACE WITH MATIAS MAIL
+            $asunto = "Contacto desde la web";
+            $nombre = $_POST['Nombre'];
+            $email = $_POST['Email'];
+            $telefono = $_POST['Telefono'];
+            $titulo = $_POST['Asunto'];
+            $mensaje = $_POST['Mensaje'];
+            if($nombre != NULL && $email != NULL && $telefono != NULL){
+                $carta = "De: $nombre \n";
+                $carta .= "Correo: $email \n";
+                $carta .= "Telefono: $telefono \n";
+                $carta .= "Asunto : $titulo \n";
+                $carta .= "Mensaje: $mensaje";
+                
+                mail($destinatario, $asunto, $carta);
+            }
+        }
+    }
+        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +63,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -350,7 +369,7 @@
                             </div>
                         </div>
                         <div class="text-center margin-2-0 margin-8-percent">
-                            <div class="g-recaptcha captcha-custom-style" data-sitekey="6LeN3Z8UAAAAAA4JHXNl_yJ-qC3icMJ75vAPVCrZ"></div>
+                            <div class="g-recaptcha captcha-custom-style" data-sitekey="6Lce358UAAAAAIc8Vo6dxvMoHjMTT7Ysu7q-h-BG"></div>
                             <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
                         </div>
                     </form>

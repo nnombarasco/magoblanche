@@ -323,3 +323,11 @@ footer li{
 .margin-8-percent {
     margin: 8% 0%;
 }
+
+
+.captcha-custom-style {
+    display: inline-block;
+    margin-bottom: 2%;
+    vertical-align: middle;
+    margin-right: 2%;
+} 	
