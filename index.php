@@ -1,10 +1,13 @@
-﻿<?php    
-    if(!empty($_POST['Nombre']) 
-        && !empty($_POST['Email']) 
-        && !empty($_POST['Telefono']) 
-        && !empty($_POST['Asunto']) 
-        && !empty($_POST['Nombre'])
-        && !empty($_POST['g-recaptcha-response'])) {
+﻿<?php
+
+$filledPost = !empty($_POST['Nombre']) 
+            && !empty($_POST['Email']) 
+            && !empty($_POST['Telefono']) 
+            && !empty($_POST['Asunto']) 
+            && !empty($_POST['Nombre']);
+$validCaptcha = false;
+
+    if($filledPost && !empty($_POST['g-recaptcha-response'])) {
 
             $url = 'https://www.google.com/recaptcha/api/siteverify';
             $fields = [
@@ -25,7 +28,9 @@
             $result = json_decode(curl_exec($ch), true);
             curl_close($ch);
 
-            if (!empty($result['success']) && $result['success'] == true) { 
+            $validCaptcha = !empty($result['success']) && $result['success'] == true;
+
+            if ($validCaptcha) { 
             $destinatario = "rgonzalezfro@gmail.com"; //TODO: REPLACE WITH MATIAS MAIL
             $asunto = "Contacto desde la web";
             $nombre = $_POST['Nombre'];
@@ -73,39 +78,35 @@
 </head>
 <body>
     <a href="#" id="js_up" class="boton-subir">
-        <!-- link del icono http://fontawesome.io/icon/rocket/ -->
         <i class="fa fa-rocket" aria-hidden="true"></i>
     </a>
-    
 
     <!-- script para que funcione al 100% el botón ir arriba -->
     <script>
-        //invocamos al objeto (window) y a su método (scroll), solo se ejecutara si el usuario hace scroll en la página
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 300) { //condición a cumplirse cuando el usuario aya bajado 301px a más.
-                $("#js_up").slideDown(300); //se muestra el botón en 300 mili segundos
-            } else { // si no
-                $("#js_up").slideUp(300); //se oculta el botón en 300 mili segundos
-            }
-        });
-
-        //creamos una función accediendo a la etiqueta i en su evento click
-        $("#js_up i").on('click', function (e) {
-            e.preventDefault(); //evita que se ejecute el tag ancla (<a href="#">valor</a>).
-            $("body,html").animate({ // aplicamos la función animate a los tags body y html
-                scrollTop: 0 //al colocar el valor 0 a scrollTop me volverá a la parte inicial de la página
-            }, 700); //el valor 700 indica que lo ara en 700 mili segundos
-            return false; //rompe el bucle
-        });
         function goToSection(section){
             window.location.href=section;
             $(".navbar-collapse").removeClass("show");
         }
-        $("#navbarSupportedContent.navbar-collapse > ul > li").on('click', function (e) {
-            e.preventDefault();
-            debugger;
+        function recaptchaCallback(){
+            $('.g-recaptcha').removeClass('captchaError');
+            $('.emailError').remove();
+            $('.emailSuccess').remove();
+        }
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) { 
+                $("#js_up").slideDown(300); 
+            } else { 
+                $("#js_up").slideUp(300);
+            }
         });
 
+        $("#js_up i").on('click', function (e) {
+            e.preventDefault(); 
+            $("body,html").animate({
+                scrollTop: 0 
+            }, 700); 
+            return false;
+        });
     </script>
 
     <!--Principal-->
@@ -353,23 +354,31 @@
                     <form method="POST">
                         <div class="row d-flex justify-content-center">
                             <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                                <input type="text" name="Nombre" class="form-control" placeholder="Nombre" required>
+                                <input type="text" name="Nombre" class="form-control" placeholder="Nombre" required <?php if ($filledPost && !$validCaptcha) {echo('value="'.$_POST['Nombre'].'"');} ?>>
                             </div>
                             <div class="col-sm-12 col-lg-10 margin-2-0">
-                                <input type="email" name="Email" class="form-control" placeholder="Email" required>
+                                <input type="email" name="Email" class="form-control" placeholder="Email" required <?php if ($filledPost && !$validCaptcha) {echo('value="'.$_POST['Email'].'"');} ?>>
                             </div>
                             <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                                <input type="text" name="Telefono" class="form-control" placeholder="Telefono" required>
+                                <input type="text" name="Telefono" class="form-control" placeholder="Telefono" required  <?php if ($filledPost && !$validCaptcha) {echo('value="'.$_POST['Telefono'].'"');} ?>>
                             </div>
                             <div class="col-sm-12 col-lg-10 margin-2-0">
-                                <input type="text" name="Asunto" class="form-control" placeholder="Asunto" required>
+                                <input type="text" name="Asunto" class="form-control" placeholder="Asunto" required  <?php if ($filledPost && !$validCaptcha) {echo('value="'.$_POST['Asunto'].'"');} ?>>
                             </div>
                             <div class="col-sm-12 offset-lg-1 col-lg-10 margin-2-0">
-                                <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"></textarea>
+                                <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Mensaje"><?php if ($filledPost && !$validCaptcha) {echo($_POST['Mensaje']);} ?></textarea>
                             </div>
                         </div>
                         <div class="text-center margin-2-0 margin-8-percent">
-                            <div class="g-recaptcha captcha-custom-style" data-sitekey="6Lce358UAAAAAIc8Vo6dxvMoHjMTT7Ysu7q-h-BG"></div>
+                            <div class="g-recaptcha captcha-custom-style<?php if ($filledPost && !$validCaptcha) echo(' captchaError'); ?>" data-sitekey="6Lce358UAAAAAIc8Vo6dxvMoHjMTT7Ysu7q-h-BG" data-callback="recaptchaCallback"></div>
+                            <?php 
+                            if ($filledPost && $validCaptcha) { 
+                                echo('<div class="emailSuccess">Email enviado exitosamente!</div>');
+                            }
+                            else if ($filledPost){
+                                echo('<div class="emailError">Falla al verificar el captcha</div>');
+                            }
+                            ?>
                             <button type="submit" class="bottom-contacto btn btn-info prop-btn btn-lg">Enviar</button>
                         </div>
                     </form>

@@ -331,3 +331,15 @@ footer li{
     vertical-align: middle;
     margin-right: 2%;
 } 	
+
+.captchaError{
+border: 1px solid red;
+}
+.emailError{
+    color: red;
+    margin: 0px 1em 1em;
+}
+.emailSuccess{
+    color: green;
+    margin: 0px 1em 1em;
+}
