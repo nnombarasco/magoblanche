@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css"
+    "\\css",
+    "\\js"
   ],
-  "SelectedNode": "\\css\\home.css",
+  "SelectedNode": "\\index.php",
   "PreviewInSolutionExplorer": false
 }

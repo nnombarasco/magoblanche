@@ -1,5 +1,5 @@
 body{
-    font-family: 'Slabo 13px', serif;
+    /* font-family: 'Slabo 13px', serif; */
     color:white;
     font-size: 16px;
 }
@@ -9,6 +9,25 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+a.text-secondary:focus, a.text-secondary:hover {
+    color: #445!important;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+.image-container{
+    height: 270px;
+    width: 270px;
+    overflow: hidden;
+    margin: auto;
+}
+.rounded-circle > img{
+    width: 270px;
+    object-fit: cover;
 }
 
 .vertical-center{
@@ -31,12 +50,12 @@ section{
 }
 
 .principal {
-    background-image: url("./../media/theatre.jpg");
+    background-image: url("./../media/bgmagic.jpg");
     background-size: cover;
     background-color: #1D0F84;
     width:100%;
     height:100vh;
-    padding-top: 10%;
+    /* padding-top: 10%; */
 }
 
 .firstcolor {
@@ -49,7 +68,7 @@ section{
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: rgb(49, 214, 255);
+    background-color: #02d0f5;
     padding-bottom: 5%;
 }
 .third-color{
@@ -120,7 +139,7 @@ section{
 }
 
 .navbar-button:hover{
-    background-color: #e7288e;
+    background-color: #F50057;
     color: white;
 }
 
@@ -129,18 +148,6 @@ section{
     margin-top: 6rem;
 }
 
-.mago-img {
-    width: 29%;
-    margin-top: 5rem;
-}
-
-/*contenedor de imagene, carousel */
-/* .border-box {
-    border: 10px solid;
-    box-shadow: 5px 10px #e00606;
-} */
-
-/*Parrafo de Quien soy?*/
 /*parrafo shows*/
 .text-show {
     font-family: 'Slabo 27px', serif;
@@ -158,7 +165,7 @@ section{
 /*titulo QuienSoy?*/
 .title-prop {
     font-family: 'Lobster', cursive;
-    color: #e7288e;
+    /* color: #e7288e; */
     font-size: 45px;
 }
 .title-quiensoy {
@@ -184,6 +191,14 @@ section{
     margin-bottom: 2%; 
 }
 
+#contacto ul{
+    margin: 15% 0px;
+}
+#contacto ul > li{
+    margin: 20px auto;
+    width: 220px;
+}
+
 /*btn enviar*/
 .prop-btn {
     font-family: 'Lobster', cursive;
@@ -200,19 +215,31 @@ section{
     padding: 8% 3%;
 }
 
-#servicios > .container > .flex-row-reverse {
+/* #servicios > .container > .flex-row-reverse {
     background-color: #02d0f5;
-}
+} */
 
+#show iframe {
+    margin: 0 5px;
+}
 
 
 /*FOOTER*/
 .footer {
     color: white;
     background: rgba(30, 30, 31, 0.8);
-    padding: 3% 0%;
+    /* padding: 3% 0%; */
     font-family: 'Roboto', sans-serif;
     font-size: small;
+}
+
+footer li{
+    width: 20px;
+    margin: 0px 15px;
+}
+.footer-copyright{
+    color: rgba(200, 200, 205, 0.8);
+    font-style: italic;
 }
 
 .margin-2-0 {
@@ -295,4 +322,24 @@ section{
 
 .margin-8-percent {
     margin: 8% 0%;
+}
+
+
+.captcha-custom-style {
+    display: inline-block;
+    margin-bottom: 2%;
+    vertical-align: middle;
+    margin-right: 2%;
+} 	
+
+.captchaError{
+border: 1px solid red;
+}
+.emailError{
+    color: red;
+    margin: 0px 1em 1em;
+}
+.emailSuccess{
+    color: green;
+    margin: 0px 1em 1em;
 }
